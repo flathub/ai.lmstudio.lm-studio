@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=LM-Studio
+Exec=lmstudio %U
+Terminal=false
+Type=Application
+Icon=ai.lmstudio.lm-studio
+StartupWMClass=LM-Studio
+Comment=Use the chat UI or local server to experiment and develop with local LLMs.
+Keywords=developer;llm;
+MimeType=x-scheme-handler/lmstudio;
+Categories=Development;Utility;
