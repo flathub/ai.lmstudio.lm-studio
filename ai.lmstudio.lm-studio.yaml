@@ -11,8 +11,8 @@ finish-args:
   - --socket=wayland
   - --socket=fallback-x11
   - --socket=pulseaudio
-  - --device=all
-  - --persist=.
+  - --device=dri
+  - --persist=.lmstudio
   - --talk-name=org.kde.StatusNotifierWatcher
 separate-locales: false
 
