@@ -9,7 +9,7 @@
   <summary>Run AI models, locally and privately</summary>
   <metadata_license>CC-BY-SA-4.0</metadata_license>
   <launchable type="desktop-id">ai.lmstudio.lm-studio.desktop</launchable>
-  <url type="homepage">https://lmstudio.ai/download?os=linux</url>
+  <url type="homepage">https://lmstudio.ai</url>
   <url type="help">https://lmstudio.ai/docs/app</url>
   <description>
     <p>LM Studio is a desktop app for running large language models (LLMs) locally on your own computer.</p>
