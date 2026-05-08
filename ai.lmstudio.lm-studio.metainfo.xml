@@ -2,7 +2,7 @@
 <component type="desktop-application">
   <id>ai.lmstudio.lm-studio</id>
   <name>LM Studio</name>
-  <project_license>LicenseRef-proprietary=https://lmstudio.ai/app-privacy</project_license>
+  <project_license>LicenseRef-proprietary=https://lmstudio.ai/app-terms</project_license>
   <developer id="ai.lmstudio">
     <name>Element Labs, Inc.</name>
   </developer>
@@ -13,6 +13,23 @@
   <url type="help">https://lmstudio.ai/docs/app</url>
   <description>
     <p>LM Studio is a desktop app for running large language models (LLMs) locally on your own computer.</p>
+    <p>features</p>
+    <ul>
+      <li>Run Local LLMs Offline — Execute open-weight models entirely on your own device without cloud dependency.</li>
+      <li>Cross-Platform Support — Available on Windows, macOS, and Linux.</li>
+      <li>Model Discovery &amp; Download — Browse and download GGUF/MLX models directly from Hugging Face.</li>
+      <li>Built-in Chat Interface — Interact with local models through a clean ChatGPT-like UI.</li>
+      <li>OpenAI-Compatible API Server — Serve local models via OpenAI-style REST endpoints for app integration.</li>
+      <li>Document Chat (RAG) — Chat with local documents privately and offline.</li>
+      <li>Model Management — Organize models, prompts, presets, and configurations in one place.</li>
+      <li>Developer Tooling — Includes CLI, Python SDK, TypeScript SDK, and REST</li>
+      <li>Headless Mode — Run LM Studio without GUI for servers or CI environments.</li>
+      <li>MCP Integration — Connect MCP servers and external AI workflows.</li>
+      <li>Privacy-First Design — Prompts and conversations stay on the local machine.</li>
+      <li>Hardware-Aware Optimization — GPU offloading and memory controls for better performance on limited hardware.</li>
+      <li>Multi-Model Support — Supports Llama, Qwen, Mistral, Gemma, Phi, DeepSeek, and more.</li>
+      <li>Local Network Serving — Expose local models across devices on the same network.</li>
+    </ul>
   </description>
   <screenshots>
     <screenshot type="default">
