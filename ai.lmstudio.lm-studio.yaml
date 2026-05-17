@@ -31,12 +31,9 @@ modules:
     buildsystem: simple
     build-commands:
       - install -Dm755 -t ${FLATPAK_DEST}/bin/ apply_extra lmstudio
-      - install -Dm644 -t ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps
-        ${FLATPAK_ID}.png
-      - install -Dm644 -t ${FLATPAK_DEST}/share/applications
-        ${FLATPAK_ID}.desktop
-      - install -Dm644 -t ${FLATPAK_DEST}/share/metainfo
-        ${FLATPAK_ID}.metainfo.xml
+      - install -Dm644 -t ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps ${FLATPAK_ID}.png
+      - install -Dm644 -t ${FLATPAK_DEST}/share/applications ${FLATPAK_ID}.desktop
+      - install -Dm644 -t ${FLATPAK_DEST}/share/metainfo ${FLATPAK_ID}.metainfo.xml
     sources:
       - type: script
         commands:
@@ -44,17 +41,16 @@ modules:
         dest-filename: lmstudio
       - type: script
         commands:
-          - chmod +x ./lmstudio.AppImage && unappimage lmstudio.AppImage
-            >/dev/null
+          - chmod +x ./lmstudio.AppImage && unappimage lmstudio.AppImage >/dev/null
           - mv squashfs-root lmstudio
           - rm -f lmstudio.AppImage
         dest-filename: apply_extra
       - type: extra-data
         only-arches: [x86_64]
         filename: lmstudio.AppImage
-        url: https://installers.lmstudio.ai/linux/x64/0.4.12-1/LM-Studio-0.4.12-1-x64.AppImage
-        sha256: 53b4c990c52a98be1693bef3708376ff8205cfb6abb6f560d2c691123a06cbc2
-        size: 1097509444
+        url: https://installers.lmstudio.ai/linux/x64/0.4.13-1/LM-Studio-0.4.13-1-x64.AppImage
+        sha256: 20786a02c6158b55c26abcb1ac4ca16a40f2c9edaf7a16ec27bede17af0a6888
+        size: 1097611895
         x-checker-data:
           type: rotating-url
           url: https://lmstudio.ai/download/latest/linux/x64?format=AppImage
@@ -62,9 +58,9 @@ modules:
       - type: extra-data
         only-arches: [aarch64]
         filename: lmstudio.AppImage
-        url: https://installers.lmstudio.ai/linux/arm64/0.4.12-1/LM-Studio-0.4.12-1-arm64.AppImage
-        sha256: 1addd088fe0fdc1a5b45fee0bdd28b51a7fdfe8cff79e7f93346d5cc2a873d2c
-        size: 1341244220
+        url: https://installers.lmstudio.ai/linux/arm64/0.4.13-1/LM-Studio-0.4.13-1-arm64.AppImage
+        sha256: dd9fb0b7c1fc41d162cf5f743dafb7ddf90a1dfd437fb9f35a850d633d93ad8c
+        size: 1341407719
         x-checker-data:
           type: rotating-url
           url: https://lmstudio.ai/download/latest/linux/arm64?format=AppImage
