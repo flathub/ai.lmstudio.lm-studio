@@ -48,9 +48,9 @@ modules:
       - type: extra-data
         only-arches: [x86_64]
         filename: lmstudio.AppImage
-        url: https://installers.lmstudio.ai/linux/x64/0.4.17-4/LM-Studio-0.4.17-4-x64.AppImage
-        sha256: e1f270924d67986bbc93f6efdefb5e7d184d1f792aeff175f1726ff239cad284
-        size: 1103202118
+        url: https://installers.lmstudio.ai/linux/x64/0.4.18-1/LM-Studio-0.4.18-1-x64.AppImage
+        sha256: 2a9ce766ed6d89786d5bd5c3bdb302807f71c86c9a3b7eff175b16a8ad510949
+        size: 1103481625
         x-checker-data:
           type: rotating-url
           url: https://lmstudio.ai/download/latest/linux/x64?format=AppImage
@@ -58,9 +58,9 @@ modules:
       - type: extra-data
         only-arches: [aarch64]
         filename: lmstudio.AppImage
-        url: https://installers.lmstudio.ai/linux/arm64/0.4.17-4/LM-Studio-0.4.17-4-arm64.AppImage
-        sha256: a21bdf018bcc80be760deca2694633e7f695b661a4eb3cc1b4d13db9b97c0da8
-        size: 1336354149
+        url: https://installers.lmstudio.ai/linux/arm64/0.4.18-1/LM-Studio-0.4.18-1-arm64.AppImage
+        sha256: 7524606dfd97a3b271a933fed95aad3456c71c520d75ab9c3cc08c9f050860f3
+        size: 1336359003
         x-checker-data:
           type: rotating-url
           url: https://lmstudio.ai/download/latest/linux/arm64?format=AppImage
