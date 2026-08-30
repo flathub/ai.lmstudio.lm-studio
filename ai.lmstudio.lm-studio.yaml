@@ -2,6 +2,8 @@ app-id: ai.lmstudio.lm-studio
 runtime: org.freedesktop.Platform
 runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.rust-stable
 base: org.electronjs.Electron2.BaseApp
 base-version: '25.08'
 command: lmstudio
@@ -17,16 +19,22 @@ finish-args:
 separate-locales: false
 
 modules:
-  - name: unappimage
+  - name: squishy
     buildsystem: simple
     build-options:
-      cflags: -Wno-incompatible-pointer-types
+      append-path: /usr/lib/sdk/rust-stable/bin
+      env:
+        CARGO_HOME: /run/build/squishy/cargo
+        CARGO_NET_OFFLINE: "ture"
     build-commands:
-      - make -C squashfs-tools install INSTALL_DIR=/app/bin
+      - cargo --offline --frozen build --release
+      - install -Dpm755 -t ${FLATPAK_DEST}/bin target/release/squishy
     sources:
       - type: git
-        url: https://github.com/refi64/unappimage
-        commit: d7f86f2a0d7ec3a69211125207d5f127386b849a
+        url: https://github.com/pkgforge/squishy.git
+        tag: v0.5.2
+        commit: be34f0fe914747c2495aa36b1e609e9c18cc961a
+      - generated-sources.json
   - name: lmstudio
     buildsystem: simple
     build-commands:
@@ -41,8 +49,7 @@ modules:
         dest-filename: lmstudio
       - type: script
         commands:
-          - chmod +x ./lmstudio.AppImage && unappimage lmstudio.AppImage >/dev/null
-          - mv squashfs-root lmstudio
+          - squishy unsquashfs lmstudio.AppImage -w lmstudio >/dev/null
           - rm -f lmstudio.AppImage
         dest-filename: apply_extra
       - type: extra-data
