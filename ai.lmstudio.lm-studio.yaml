@@ -25,7 +25,7 @@ modules:
       append-path: /usr/lib/sdk/rust-stable/bin
       env:
         CARGO_HOME: /run/build/squishy/cargo
-        CARGO_NET_OFFLINE: "ture"
+        CARGO_NET_OFFLINE: ture
     build-commands:
       - cargo --offline --frozen build --release
       - install -Dpm755 -t ${FLATPAK_DEST}/bin target/release/squishy
@@ -55,9 +55,9 @@ modules:
       - type: extra-data
         only-arches: [x86_64]
         filename: lmstudio.AppImage
-        url: https://installers.lmstudio.ai/linux/x64/0.4.23-1/LM-Studio-0.4.23-1-x64.AppImage
-        sha256: c1bdf195281e25dc921af5c91eb2502035240dce1217140c43036d6cf3038fd8
-        size: 1010336263
+        url: https://installers.lmstudio.ai/linux/x64/0.4.24-1/LM-Studio-0.4.24-1-x64.AppImage
+        sha256: 17cb8ac6374f9182fc127efae20680265e3c4c17d96eadf147eb5fe6111a9353
+        size: 1013646674
         x-checker-data:
           type: rotating-url
           url: https://lmstudio.ai/download/latest/linux/x64?format=AppImage
@@ -65,9 +65,9 @@ modules:
       - type: extra-data
         only-arches: [aarch64]
         filename: lmstudio.AppImage
-        url: https://installers.lmstudio.ai/linux/arm64/0.4.23-1/LM-Studio-0.4.23-1-arm64.AppImage
-        sha256: 3333f28050744ad4bc293b995aad0047e66d890209df9dd01e582975d39ad7d6
-        size: 1284238985
+        url: https://installers.lmstudio.ai/linux/arm64/0.4.24-1/LM-Studio-0.4.24-1-arm64.AppImage
+        sha256: 708908d1510d19ec965514bdf09e6fc688efa076ec166a323c1305535b2939a2
+        size: 1288231061
         x-checker-data:
           type: rotating-url
           url: https://lmstudio.ai/download/latest/linux/arm64?format=AppImage
