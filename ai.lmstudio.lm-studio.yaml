@@ -61,7 +61,7 @@ modules:
         x-checker-data:
           type: rotating-url
           url: https://lmstudio.ai/download/latest/linux/x64?format=AppImage
-          pattern: https://installers.lmstudio.ai/linux/x64/([0-9.]+)/LM-Studio-([0-9.]+)-x64.AppImage
+          pattern: '^https://installers\.lmstudio\.ai/linux/x64/[^/]+/LM-Studio-([0-9.]+(?:-[0-9]+)?)-x64\.AppImage$'
       - type: extra-data
         only-arches: [aarch64]
         filename: lmstudio.AppImage
@@ -71,7 +71,7 @@ modules:
         x-checker-data:
           type: rotating-url
           url: https://lmstudio.ai/download/latest/linux/arm64?format=AppImage
-          pattern: https://installers.lmstudio.ai/linux/arm64/([0-9.]+)/LM-Studio-([0-9.]+)-arm64.AppImage
+          pattern: '^https://installers\.lmstudio\.ai/linux/arm64/[^/]+/LM-Studio-([0-9.]+(?:-[0-9]+)?)-arm64\.AppImage$'
       - type: file
         path: ai.lmstudio.lm-studio.desktop
       - type: file
